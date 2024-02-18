@@ -1,0 +1,32 @@
+﻿<Window x:Class="SchoolBuss.Views.CreateParentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:SchoolBuss.Views"
+        mc:Ignorable="d"
+        Title="CreateParentView" Height="450" Width="400" Name="CreateParent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Create Parent"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Ahanori" FontWeight="Black"/>
+
+        <TextBox Grid.Row="1" BorderBrush="Orange" Width="250" Height="50" materialDesign:HintAssist.Hint="Firstname" materialDesign:HintAssist.Foreground="Orange" Style="{StaticResource MaterialDesignOutlinedTextBox}" Text="{Binding Firstname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="2" BorderBrush="Orange" Width="250" Height="50" materialDesign:HintAssist.Hint="Lastname" materialDesign:HintAssist.Foreground="Orange" Style="{StaticResource MaterialDesignOutlinedTextBox}" Text="{Binding Lastname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="3" BorderBrush="Orange" Width="250" Height="50" materialDesign:HintAssist.Hint="Phone" materialDesign:HintAssist.Foreground="Orange" Style="{StaticResource MaterialDesignOutlinedTextBox}" Text="{Binding Phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="4" BorderBrush="Orange" Width="250" Height="50" materialDesign:HintAssist.Hint="Username" materialDesign:HintAssist.Foreground="Orange" Style="{StaticResource MaterialDesignOutlinedTextBox}" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="5" BorderBrush="Orange" Width="250" Height="50" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.Foreground="Orange" Style="{StaticResource MaterialDesignOutlinedTextBox}" Text="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Button Background="Orange" Click="CreateButton_Click" Grid.Row="9" Name="CreateButton" Content="CREATE" Height="40" Width="170" BorderThickness="0" Command="{Binding CreateParent}" />
+    </Grid>
+</Window>
